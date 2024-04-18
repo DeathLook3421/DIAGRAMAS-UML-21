@@ -1,0 +1,47 @@
+@startuml
+
+package logica {
+
+    interface Main
+
+    class Carta {
+    - valor: string
+    - pinta: string
+    + _init_(valor: string, pinta: string)
+    + dar_valor(): int
+    + mostrar(): string
+}
+
+    class Mazo {
+    - Cartas: list
+    + _init_(jugador = False)
+    + dar_valor(): int
+    + tiene_as(): bool
+    + dar_carta(): Carta
+    + agregar_carta(carta): None
+    + mostrar_carta(todas = False): None
+}
+
+    class Juego {
+    - Mazo: mazo
+    - casa: mazo
+    - jugador: mazo
+    + _init_()
+    + iniciar_juego(): None
+    + mostrar_juego(): None
+    + Plant_casa_juego(): None
+    + Plan_juego(): None
+}
+
+Main <|.. iniciar_juego
+Main <|.. mostrar_juego
+Main <|.. Plan_juego
+Main <|.. Plant_casa_juego
+}
+
+Main --* Carta
+
+Principal -- Juego
+Juego --o Carta
+Carta o-- Mazo
+@enduml

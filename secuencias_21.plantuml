@@ -1,0 +1,24 @@
+@startuml
+
+participant Usuario
+participant Main
+participant Juego
+
+activate Main
+Usuario -> Main: Ejecutar juego
+activate Juego
+Main -> Juego: iniciar_juego()
+Juego -> Juego: Preparar mazo y jugadores
+Juego --> Main: Mostrar mensaje de bienvenida y estado del juego
+Main -> Juego: Plan_juego()
+Juego -> Juego: Jugador realiza una acción
+Juego --> Main: Mostrar estado actual del juego
+Main -> Juego: Plant_casa_juego()
+Juego -> Juego: La casa juega su turno
+Juego --> Main: Mostrar resultado del juego y mensaje de despedida
+deactivate Main
+deactivate Juego
+Usuario -> Main: Salir del juego
+deactivate Usuario
+
+@enduml
