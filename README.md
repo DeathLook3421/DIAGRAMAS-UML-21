@@ -27,7 +27,7 @@ Hemos utilizado tres tipos principales de diagramas UML para modelar nuestro jue
 ### Diagrama de Clases: 
 Este diagrama representa la estructura estática del juego, mostrando las clases y sus relaciones. En nuestro caso, hemos representado las clases carta, mazo, Juego y Main, así como las relaciones entre ellas.
 
-![Diagrama de Clases](image-2.png)
+![Diagrama de Clases](image-3.png)
 
 ### Diagrama de Secuencia: 
 Este diagrama muestra la interacción entre el usuario y el juego a lo largo del tiempo, representando la secuencia de mensajes intercambiados entre las clases Usuario, Main y Juego durante la ejecución del juego.
