@@ -4,6 +4,7 @@
 
 - Maria José Patiño Vera 20232020053
 - Luis Santiago Mesa Bautista 20232020041
+- Dikson Javier Castillo Triviño 20232020115
 
 ## Introducción
 Los Diagramas de Modelado Unificado (UML) son una herramienta esencial en el diseño y desarrollo de software, permitiendo a los equipos de desarrollo visualizar, diseñar y comunicar la estructura y el comportamiento de un sistema de software. En este contexto, hemos utilizado UML para modelar un juego de blackjack, un popular juego de cartas de casino.
