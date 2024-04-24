@@ -1,0 +1,60 @@
+@startuml
+
+
+package logica {
+
+    class Carta {
+    - valor: string
+    - pinta: string
+    + init(valor: string, pinta: string)
+    + dar_valor(): int
+    + mostrar(): string
+    }
+
+    class Mazo {
+    - cartas: List<Carta>
+    + init()
+    + barajar(): None
+    + sacar_carta(): Carta
+    + agregar_carta(carta: Carta): None
+    }
+
+    class Jugador {
+    - nombre: string
+    - mano: List<Carta>
+    + init(nombre: string)
+    + recibir_carta(carta: Carta): None
+    + mostrar_mano(): None
+    + get_valor_mano(): int
+    }
+
+    class Repartidor {
+    - mazo: Mazo
+    + init(mazo: Mazo)
+    + repartir_carta(jugador: Jugador): None
+    + mostrar_primera_carta(): None
+    }
+
+    class Juego {
+    - mazo: Mazo
+    - jugador: Jugador
+    - repartidor: Repartidor
+    + init()
+    + iniciar_juego(): None
+    + mostrar_estado_juego(): None
+    + jugador_planta(): bool
+    + repartidor_juega(): None
+    + determinar_ganador(): string
+    }
+
+}
+
+Principal -- Juego
+Juego o-- Mazo
+Juego o-- Jugador
+Juego o-- Repartidor
+Jugador -- Mazo
+Repartidor -- Mazo
+Mazo o-- Carta
+
+@enduml
